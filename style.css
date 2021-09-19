@@ -815,17 +815,17 @@ background-image: url("footer	.jpeg");
   }
 
   to {
-    width: 16em;
+    width: 8em;
   }
 }
 
 @keyframes blinkTextCursor {
   from {
-    border-right-color: rgba(201, 39, 39, 0);
+    border-right-color: transparent;
   }
 
   to {
-    border-right-color: transparent;
+    border-right-color: rgb(238, 30, 30);
   }
 }
 
@@ -838,5 +838,160 @@ background-image: url("footer	.jpeg");
   .animaline {
     left: 35%;
     font-size: 200%;
+  }
+}
+
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */  
+  font-family: 'Lobster', cursive;
+  animation: 
+    typing 1s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 90% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: pink; }
+}
+
+
+
+.css-typing p {
+  border-right: .55em solid orange;
+  font-family: "Courier";
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.css-typing p:nth-child(1) {
+  width: 8.3em;
+  -webkit-animation: type 1.5s steps(40, end);
+  animation: type 1.5s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(2) {
+  width: 8.5em;
+  opacity: 0;
+  -webkit-animation: type2 1.5s steps(40, end);
+  animation: type2 1.5s steps(40, end);
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(3) {
+  width: 29.5em;
+  opacity: 0;
+  -webkit-animation: type3 2s steps(50, end), blink .5s step-end infinite alternate;
+  animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .55em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .55em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  59.9% {
+    border-right: .2em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  59.9% {
+    border-right: .2em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
   }
 }
