@@ -65,6 +65,16 @@ body {
 
 .home .caption {
   width: 70%;
+  position: flex;
+}
+
+.caption1{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+
 }
 
 .home .caption h1 {
@@ -246,7 +256,7 @@ body {
 .cover {
   width: 100%;
   height: 100%;
-	background: linear-gradient(to right, rgba(8, 8, 9, 0.65), rgba(8, 8, 9, 0.10));
+	background: rgba(10, 10, 10, 0.775);
   opacity: 0;
   animation: captionText .5s ease forwards;
   animation-delay: 1s;
@@ -259,6 +269,16 @@ body {
 	  font-family: 'Lobster', cursive;
 		font-size: 10vh;
 		text-align: center;
+}
+
+.titulo1{
+  font-family: 'Lobster', cursive;
+  font-size: 5vh;
+  text-align: center;
+  color: beige;
+  opacity: 0;
+  animation: captionText .5s ease forwards;
+  animation-delay: 1s;
 }
 
 .textpar{
@@ -320,6 +340,51 @@ body {
   -webkit-box-shadow: 0px 7px 13px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 7px 13px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 7px 13px 0px rgba(0, 0, 0, 0.75);
+  text-transform: inherit;
+}
+
+.button-container{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  perspective: 1000px;
+  .button-flipper{
+     transition: .8s cubic-bezier(.775, .07, .575, .995);
+     transform-style: preserve-3d;
+     position: absolute;
+     &:hover{
+        transform: rotateX(180deg);
+     }
+  }
+  .front-button{
+     cursor: pointer;
+     width: 260px;
+     height: 60px;
+     background-color: #D35400;
+     border: none;
+     font-size: 2em;
+     color: #fff;
+     backface-visibility: hidden;
+     z-index: 2;
+     transform: rotateX(0deg);
+     position: absolute;
+     box-shadow: 0px 8px 12px #ccc;
+  }
+  .back-button{
+     cursor: pointer;
+     width: 260px;
+     height: 60px;
+     background-color: #26C281;
+     border: none;
+     font-size: 2em;
+     color: #fff;
+     backface-visibility: hidden;
+     transform: rotateX(-180deg);
+     position: relative;
+     box-shadow: 0px 8px 12px #ccc;
+  }
 }
 
 .sombras1 {
@@ -357,6 +422,8 @@ body {
   margin: 4px 2px;
   opacity: 1;
   transition: 0.3s;
+  font-family: helvetica;
+  font-weight: bold;
 }
 
 @media (max-width: 450px) {
@@ -379,15 +446,40 @@ body {
 
 .flip-card {
   background-color: transparent;
-  width: 300px;
-  height: 300px;
+  border: none;
+  color: white;
+
+  text-align: center;
+  font-size: 16px;
+
+  opacity: 1;
+  transition: 0.3s;
+  font-family: helvetica;
+  font-weight: bold;
   perspective: 1000px;
+}
+
+.testbut{
+  padding-top: 50px;
+  padding-bottom: 50px;;
+}
+
+.justone{
+  z-index: 5;
+}
+
+.justtwo{
+  height: 100px;
+  
+}
+.justtre{
+  width: 400px;
 }
 
 .flip-card-inner {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto%;
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
@@ -1074,6 +1166,11 @@ background-image: url("footer	.jpeg");
   height: auto;
 }
 
+.imagever{
+  width: 540px;
+  height: auto;
+}
+
 
 .imagepre{
   position: relative;
@@ -1085,4 +1182,26 @@ background-image: url("footer	.jpeg");
   animation: captionText .5s ease forwards;
   animation-delay: 1s;
   align-items: center;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
 }
