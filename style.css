@@ -257,6 +257,7 @@ body {
   width: 100%;
   height: 100%;
 	background: rgba(10, 10, 10, 0.775);
+
   opacity: 0;
   animation: captionText .5s ease forwards;
   animation-delay: 1s;
@@ -269,6 +270,23 @@ body {
 	  font-family: 'Lobster', cursive;
 		font-size: 10vh;
 		text-align: center;
+    color: #22335cff;
+}
+
+.titulo2{
+  font-family: 'Lobster', cursive;
+  font-size: 10vh;
+  padding-top: 10%;
+  text-align: center;
+  color: #22335cff;
+}
+
+.titulo3{
+  font-family: 'Lobster', cursive;
+  font-size: 10vh;
+  padding-top: 20%;
+  text-align: center;
+  color: #22335cff;
 }
 
 .titulo1{
@@ -1205,3 +1223,6 @@ background-image: url("footer	.jpeg");
   vertical-align: middle;
   width: 100%;
 }
+
+
+
