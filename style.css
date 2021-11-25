@@ -90,6 +90,7 @@ body {
 .tabla{
   padding-left: 30px;
   padding-right: 30px;
+  z-index: 3;
 }
 .cmlete{
   position: absolute;
